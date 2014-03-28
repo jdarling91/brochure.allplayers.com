@@ -7,6 +7,31 @@ section.partners-ss, div.partners-ss {
   .button.large {font-size: 16px;}
 }
 
+.button--midLightGrey {
+  @include simpleGradient(lighten($midLightGrey, 10%));
+  @include border-radius(3px);
+  @include box-shadow(0 1px 0 $shinyEdge inset);
+  @include single-transition(background-color, .15s, ease-in-out);
+  display: inline-block;
+  padding: $btnBase ($btnBase * 2) $btnBase;
+  border: 1px solid darken(($midLightGrey), 5%);
+  width: auto;
+  line-height: 1;
+  color: $txtColor;
+  font-size: ms(1);
+  text-align: center;
+  // Hovers
+  &:hover,
+  &:focus {
+    color: $SSMainColor;
+    @include simpleGradient($midLightGrey);
+    text-decoration: none;
+  }
+  &:active {
+    @include box-shadow(0 1px 0 $darkEdge inset);
+  }
+}
+
 /* Normal Buttons ---------------------- */
 
   .button { font-family: $headerFontFamily; width: auto; @include simpleGradient(lighten($mainColor, 10%)); @include border-radius(3px); border: 1px solid darken(($mainColor), 15%); @include box-shadow(0 1px 0 $shinyEdge inset); color: $white; cursor: pointer; display: inline-block; font-size: ms(1); font-weight: bold; line-height: .75; margin: 0; padding: $btnBase ($btnBase * 2) $btnBase; position: relative; text-align: center; @include single-transition(background-color, .15s, ease-in-out); line-height: 1;
@@ -20,7 +45,7 @@ section.partners-ss, div.partners-ss {
     &.medium    { font-size: ms(0); }
     &.small     { font-size: ms(1); padding: ($smallBtnBase) ($smallBtnBase * 2) ($smallBtnBase + 1); }
     &.joyride-next-tip { float: right; margin-bottom: 20px; text-shadow: 1px 1px $successTextColor; @include simpleGradient(darken($successColor, 30%));  background-color: $successColor; border: 1px solid darken($successColor, 100%); }
-    
+
     &.tiny      { font-size: ms(0) - 4; padding: ($tinyBtnBase) ($tinyBtnBase * 2) ($tinyBtnBase + 1); }
     &.expand    { width: 100%; text-align: center; }
 
