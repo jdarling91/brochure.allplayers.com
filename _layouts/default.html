@@ -11,7 +11,7 @@
   {% endif %}
 
   {% if page.layout_keyword == 'one_column' or page.layout_keyword == 'partner_feature_onecol' %}
-  <!-- // One column template with hero --> 
+  <!-- // One column template with hero -->
     {% if page.hero_image != null %}
       <section id="hero-wrapper" {% if page.layout_keyword == 'partner_feature_onecol' %}class="ss-feature-partner" {% endif %}>
         {% include hero.snippet %}
@@ -24,16 +24,16 @@
     </section>
   <!-- // END One columns template with hero -->
   {% endif %}
-  
+
   {% if page.layout_keyword == 'basic_info' %}
-  <!-- // Basic informational page tempalte with right column and hero --> 
+  <!-- // Basic informational page tempalte with right column and hero -->
     <section id="info-hero-wrapper">
       {% include hero.snippet %}
     </section>
     <section class="row" id="info-content">
       <div class="twelve columns">
         <div class="eight columns">
-          {{ content }} 
+          {{ content }}
         </div>
         <div class="four columns">
           {% include info-right-col.snippet %}
@@ -44,20 +44,36 @@
   {% endif %}
 
   {% if page.layout_keyword == 'knowledge_base' %}
-  <!-- // Basic informational page tempalte with right column and hero --> 
+  <!-- // Basic informational page tempalte with right column and hero -->
     <section id="knowledge-hero-wrapper">
       {% include hero.snippet %}
     </section>
     <section class="row" id="knowledge-content">
       <div class="twelve columns">
         <div class="eight columns">
-          {{ content }} 
+          {{ content }}
         </div>
         <div class="four columns">
           {% include info-right-col.snippet %}
         </div>
       </div>
     </section>
+    <script type="text/javascript" src="//assets.zendesk.com/external/zenbox/v2.6/zenbox.js"></script>
+    <style type="text/css" media="screen, projection">
+        @import url(//assets.zendesk.com/external/zenbox/v2.6/zenbox.css);
+    </style>
+    <script type="text/javascript">
+        if (typeof(Zenbox) !== "undefined") {
+            Zenbox.init({
+                dropboxID:   "20161340",
+                url:         "https://support.allplayers.com",
+                tabTooltip:  "Support",
+                tabImageURL: "https://assets.zendesk.com/external/zenbox/images/tab_support_right.png",
+                tabColor:    "black",
+                tabPosition: "Right"
+            });
+        }
+    </script>
   <!-- // END Basic informational page template with right column and hero -->
   {% endif %}
 
@@ -70,7 +86,7 @@
       });
     });
     </script>
-  <!-- // Basic informational page tempalte with right column and hero --> 
+  <!-- // Basic informational page tempalte with right column and hero -->
     <section id="knowledge-hero-wrapper">
       {% include hero.snippet %}
     </section>
@@ -84,15 +100,31 @@
           {% if page.tags == 'group_admin_pages' %}{% include admin_user_nav.snippet %}{% endif %}
         </div>
         <div class="nine columns">
-          {{ content }} 
+          {{ content }}
         </div>
       </div>
     </section>
+    <script type="text/javascript" src="//assets.zendesk.com/external/zenbox/v2.6/zenbox.js"></script>
+    <style type="text/css" media="screen, projection">
+        @import url(//assets.zendesk.com/external/zenbox/v2.6/zenbox.css);
+    </style>
+    <script type="text/javascript">
+        if (typeof(Zenbox) !== "undefined") {
+            Zenbox.init({
+                dropboxID:   "20161340",
+                url:         "https://support.allplayers.com",
+                tabTooltip:  "Support",
+                tabImageURL: "https://assets.zendesk.com/external/zenbox/images/tab_support_right.png",
+                tabColor:    "black",
+                tabPosition: "Right"
+            });
+        }
+    </script>
   <!-- // END Basic informational page template with right column and hero -->
   {% endif %}
 
   {% if page.layout_keyword == 'knowledge_base_video' %}
-  <!-- // Basic informational page tempalte with right column and hero --> 
+  <!-- // Basic informational page tempalte with right column and hero -->
     <section id="knowledge-hero-wrapper">
       {% include hero.snippet %}
     </section>
@@ -105,14 +137,30 @@
             {% for param in page.osmplayer.params %}
               player_params['{{ param[0] }}'] = '{{ param[1] }}';
             {% endfor %}
-          {% endif %}          
+          {% endif %}
           jQuery(function() { jQuery('#media-player').osmplayer(player_params); });
         </script>
       </div>
     </section>
+    <script type="text/javascript" src="//assets.zendesk.com/external/zenbox/v2.6/zenbox.js"></script>
+    <style type="text/css" media="screen, projection">
+        @import url(//assets.zendesk.com/external/zenbox/v2.6/zenbox.css);
+    </style>
+    <script type="text/javascript">
+        if (typeof(Zenbox) !== "undefined") {
+            Zenbox.init({
+                dropboxID:   "20161340",
+                url:         "https://support.allplayers.com",
+                tabTooltip:  "Support",
+                tabImageURL: "https://assets.zendesk.com/external/zenbox/images/tab_support_right.png",
+                tabColor:    "black",
+                tabPosition: "Right"
+            });
+        }
+    </script>
   <!-- // END Basic informational page template with right column and hero -->
   {% endif %}
-  
+
   {% if page.layout_keyword == 'feature' %}
   <!-- // Features page template with right column and hero -->
     <section id="feature-hero-wrapper">
@@ -144,7 +192,7 @@
           $("#joyRideTipContent").joyride({
 
           });
-          
+
           $('a.joyride-next-tip').click(function(){
             var data = $(this).closest('.joyride-tip-guide').attr('data-index');
 
