@@ -204,5 +204,10 @@
 
       });
     </script>
+  {% if page.analytics %}
+    {% include {{page.analytics}} %}
+  {% else %}
+    {% include analytics.snippet %}
+  {% endif %}
 </body>
 </html>
